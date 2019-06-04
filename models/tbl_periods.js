@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
 
   // sequelize model table associations
   tbl_periods.associate = function (db) {
-    
+
     tbl_periods.hasMany(db.tbl_transactions, {
       sourceKey: "monthly_period",
       foreignKey: "monthly_period"

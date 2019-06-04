@@ -27,7 +27,8 @@ footer {
   margin: 3% 0 0 0;
 }
 
-.navbar-nav, .nav-link {
+.navbar-nav,
+.nav-link {
   color: white;
 }
 
@@ -85,8 +86,8 @@ a.nav-item {
 }
 
 #container {
-  min-height:100%;
-  position:relative;
+  min-height: 100%;
+  position: relative;
 }
 
 .card-body {
@@ -202,6 +203,7 @@ a.nav-item {
   #welcomeTo {
     margin-left: 10%;
   }
+
   .title {
     padding-top: 10%;
   }
@@ -211,6 +213,7 @@ a.nav-item {
   #welcomeTo {
     margin-left: 10%;
   }
+
   .title {
     padding-top: 10%;
   }
