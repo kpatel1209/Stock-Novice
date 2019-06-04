@@ -1,0 +1,14 @@
+[
+  {"price_date" : "2008-05-01", "value": 100000},
+  {"price_date" : "2008-06-01", "value": 101533},
+  {"price_date" : "2008-07-01", "value": 105312},
+  {"price_date" : "2008-08-01", "value": 99152},
+  {"price_date" : "2008-09-01", "value": 107984},
+  {"price_date" : "2008-10-01", "value": 93154},
+  {"price_date" : "2008-11-01", "value": 102500},
+  {"price_date" : "2008-12-01", "value": 98236},
+  {"price_date" : "2009-01-01", "value": 103510},
+  {"price_date" : "2009-02-01", "value": 102584},
+  {"price_date" : "2009-03-01", "value": 91054},
+  {"price_date" : "2009-04-01", "value": 90513}
+]

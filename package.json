@@ -1,0 +1,49 @@
+{
+  "name": "bootcamp-p2t4",
+  "version": "1.0.0",
+  "description": "bootcamp project 2 team 4",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit",
+    "start": "node server.js",
+    "lint": "eslint \"**/*.js\" --quiet",
+    "fix": "eslint --fix .",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bootcamp-p2t4/bootcamp-p2t4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bootcamp-p2t4/bootcamp-p2t4/issues"
+  },
+  "homepage": "https://github.com/bootcamp-p2t4/bootcamp-p2t4#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "d3": "^5.9.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql2": "^1.6.5",
+    "nodemon": "^1.18.10",
+    "sequelize": "^4.43.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "dotenv": "^6.2.0",
+    "mocha": "^6.0.2",
+    "eslint": "^5.15.1",
+    "chai-http": "^4.0.0",
+    "cross-env": "^5.2.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.13.7"
+  }
+}

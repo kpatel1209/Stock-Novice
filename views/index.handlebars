@@ -1,0 +1,173 @@
+{{!-- Positions Table COLUMN Names (START) --}}
+<section id="stock-section">
+  <h2 class="text-center">Stocks and Indexes</h2>
+  <div class="container stock-lists" id="border">
+    <div class="row ml-4 mt-3 stock-header-column">
+      <div class="col-sm-9 col-md-1 col-lg-1 offset-1">
+        <h6 class="text-center period-header">Period</h6>
+      </div>
+      <div class="col-sm-9 col-md-2 col-lg-2">
+        <h6 class="text-center stock-header">Stock</h6>
+      </div>
+      <div class="col-sm-9 col-md-1 col-lg-1 pl-1">
+        <h6 class="text-center ticker-header">Ticker</h6>
+      </div>
+      <div class="col-sm-9 col-md-1 col-lg-1 pl-1">
+        <h6 class="text-center price-header">Price</h6>
+      </div>
+      <div class="col-sm-9 col-md-1 col-lg-1 pl-1">
+        <h6 class="text-center shares-header">Shares</h6>
+      </div>
+      <div class="col-sm-9 col-md-1 col-lg-1 pl-1">
+        <h6 class="text-center valuation-header">Valuation</h6>
+      </div>
+      <div class="col-sm-9 col-md-1 col-lg-1 offset-md-1 mr-1 pl-1">
+        <h6 class="text-center buy-sell-header">Buy/Sell</h6>
+      </div>
+    </div>
+    {{!-- Positions Table COLUMN Names (END) --}}
+
+    {{!-- Positions Table FORM (START) --}}
+    {{#each positions}}
+    <form id="form-positions-buy" method="POST" action="/buy_sell">
+      <div class="form-row ml-4" id="stockList">
+        <div class="col-sm-9 col-md-1 offset-md-1">
+          <input type="text" class="form-control text-center" id="monthly_period" name="monthly_period" value="{{this.monthly_period}}"
+            readonly="readonly">
+        </div>
+        <div class="col-sm-9 col-md-2">
+          <input type="text" class="form-control" id="stock" name="stock" value="{{this.stock}}" readonly="readonly">
+        </div>
+        <div class="col-sm-9 col-md-1">
+          <input type="text" class="form-control" id="ticker" name="ticker" value="{{this.ticker}}" readonly="readonly">
+        </div>
+        <div class="col-sm-9 col-md-1">
+          <input type="text" class="form-control text-right" id="price" name="price" value="{{this.pos_price}}"
+            readonly="readonly">
+        </div>
+        <div class="col-sm-9 col-md-1">
+          <input type="text" class="form-control text-center" id="shares" name="shares" value="{{this.pos_shares}}"
+            readonly="readonly">
+        </div>
+        <div class="col-sm-9 col-md-1">
+          <input type="text" class="form-control text-right" id="valuation" name="valuation" value="{{this.pos_value}}"
+            readonly="readonly">
+        </div>
+        <div class="col-sm-9 col-md-1">
+          <button type="submit" class="btn btn-success ml-3 mb-2" id="buy" name="buy_sell" value="buy">Buy</button>
+        </div>
+        <div class="col-sm-9 col-md-1">
+          <input type="number" class="form-control" id="buy_shares" name="buy_shares" placeholder="# shares">
+        </div>
+        <div class="col-sm-9 col-md-1">
+          <button type="submit" class="btn btn-danger ml-3 mb-2" id="sell" name="buy_sell" value="sell">Sell</button>
+        </div>
+        <div class="col-sm-9 col-md-1">
+          <input type="hidden" class="form-control" id="username" name="user_name" value="{{this.user_name}}" readonly="readonly">
+        </div>
+      </div>
+    </form>
+    {{/each}}
+    {{!-- Positions Table FORM (END) --}}
+
+    {{!-- User Table COLUMN Names (START) --}}
+    <h2 class="text-center" id="cashAvailable">Cash Available</h2>
+    <div class="container">
+      <div class="row mt-2 ml-5 user-header-column">
+        <div class="col-sm-3 col-md-3 col-lg-3 offset-1">
+          <h6 class="text-center user_name-header">User Name</h6>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+          <h6 class="text-center user_cash-header">Cash Available</h6>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+          <h6 class="text-center user_monthly_period-header">Current Monthly Period</h6>
+        </div>
+      </div>
+      {{!-- User Table COLUMN Names (END) --}}
+
+      {{!-- User Table FORM (START) --}}
+      {{#each user}}
+      <form id="user-cash" method="POST" action="/buy">
+        <div class="form-row ml-5" id="user-cash-data">
+          <div class="col-sm-3 col-md-3 offset-1">
+            <input type="text" class="form-control" id="user" name="user" value="{{this.user_name}}" readonly="readonly">
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <input type="text" class="form-control text-right" id="cash" name="cash" value="{{this.cash}}" readonly="readonly">
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <input type="text" class="form-control text-center" id="monthly_period" name="monthly_period" value="{{this.monthly_period}}"
+              readonly="readonly">
+          </div>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{!-- User Table FORM (END) --}}
+
+    {{!-- Next Period Button (START) --}}
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-sm-3 col-md-6">
+          <form id="frm-next_monthly_period" method="POST" action="/next_monthly_period">
+            <button type="submit" class="btn btn-primary text-center" id="btn-next_monthly-period">Next Period</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {{!-- Next Period Button (END) --}}
+  </div>
+</section>
+
+{{!-- Transactions History (START) --}}
+<section id="transactions-section">
+  <h2 class="text-center">Transactions History</h2>
+  <div class="container table-wrapper-scroll-y my-custom-scrollbar" id="border">
+    <table class="table table-striped table-borderedmb-0">
+      <thead>
+        <tr>
+          <th scope="col-2" class="text-center">Period #</th>
+          <th scope="col-3" class="text-center">Buy/Sell</th>
+          <th scope="col-2" class="text-center">Ticker</th>
+          <th scope="col-2" class="text-center">Price</th>
+          <th scope="col-2" class="text-center">Shares</th>
+          <th scope="col-2" class="text-center">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each transactions}}
+        <tr>
+          <td class="text-center" id="trx_monthly_period">{{this.monthly_period}}</td>
+          <td class="text-center" id="trx_buy_sell">{{this.buy_sell}}</td>
+          <td class="text-center" id="trx_ticker">{{this.ticker}}</td>
+          <td class="text-center" id="trx_price">{{this.trx_price}}</td>
+          <td class="text-center" id="trx_shares">{{this.trx_shares}}</td>
+          <td class="text-center" id="trx_value">{{this.trx_value}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</section>
+{{!-- Transactions History (END) --}}
+
+<!-- Chart (START) -->
+<section id="chart-section">
+  <h2 class="text-center">Portfolio Chart</h2>
+  <div class="container" id="border">
+    <div id="chart-area">
+      <svg width="1000" height="450"></svg>
+    </div>
+    {{!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-md-6">
+          <form id="frm-create_chart" method="POST" action="/create_chart">
+            <button type="submit" class="btn btn-primary text-center" id="btn-create_chart">Create Chart</button>
+          </form>
+        </div>
+      </div> --}}
+    </div>
+  </div>
+</section>
+<!-- Chart (END) -->
