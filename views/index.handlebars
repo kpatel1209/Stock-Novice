@@ -32,8 +32,8 @@
     <form id="form-positions-buy" method="POST" action="/buy_sell">
       <div class="form-row ml-4" id="stockList">
         <div class="col-sm-9 col-md-1 offset-md-1">
-          <input type="text" class="form-control text-center" id="monthly_period" name="monthly_period" value="{{this.monthly_period}}"
-            readonly="readonly">
+          <input type="text" class="form-control text-center" id="monthly_period" name="monthly_period"
+            value="{{this.monthly_period}}" readonly="readonly">
         </div>
         <div class="col-sm-9 col-md-2">
           <input type="text" class="form-control" id="stock" name="stock" value="{{this.stock}}" readonly="readonly">
@@ -63,7 +63,8 @@
           <button type="submit" class="btn btn-danger ml-3 mb-2" id="sell" name="buy_sell" value="sell">Sell</button>
         </div>
         <div class="col-sm-9 col-md-1">
-          <input type="hidden" class="form-control" id="username" name="user_name" value="{{this.user_name}}" readonly="readonly">
+          <input type="hidden" class="form-control" id="username" name="user_name" value="{{this.user_name}}"
+            readonly="readonly">
         </div>
       </div>
     </form>
@@ -91,14 +92,16 @@
       <form id="user-cash" method="POST" action="/buy">
         <div class="form-row ml-5" id="user-cash-data">
           <div class="col-sm-3 col-md-3 offset-1">
-            <input type="text" class="form-control" id="user" name="user" value="{{this.user_name}}" readonly="readonly">
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <input type="text" class="form-control text-right" id="cash" name="cash" value="{{this.cash}}" readonly="readonly">
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <input type="text" class="form-control text-center" id="monthly_period" name="monthly_period" value="{{this.monthly_period}}"
+            <input type="text" class="form-control" id="user" name="user" value="{{this.user_name}}"
               readonly="readonly">
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <input type="text" class="form-control text-right" id="cash" name="cash" value="{{this.cash}}"
+              readonly="readonly">
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <input type="text" class="form-control text-center" id="monthly_period" name="monthly_period"
+              value="{{this.monthly_period}}" readonly="readonly">
           </div>
         </div>
       </form>
@@ -167,7 +170,7 @@
           </form>
         </div>
       </div> --}}
-    </div>
+  </div>
   </div>
 </section>
 <!-- Chart (END) -->

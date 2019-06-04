@@ -1,6 +1,6 @@
 "use strict";
 
-const add = function(a,b){
+const add = function (a, b) {
   return a + b;
 };
 

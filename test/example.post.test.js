@@ -9,15 +9,17 @@ chai.use(chaiHttp);
 
 var request;
 
-describe("POST /api/examples", function() {
+describe("POST /api/examples", function () {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
-  beforeEach(function() {
+  beforeEach(function () {
     request = chai.request(server);
-    return db.sequelize.sync({ force: true });
+    return db.sequelize.sync({
+      force: true
+    });
   });
 
-  it("should save an example", function(done) {
+  it("should save an example", function (done) {
     // Create an object to send to the endpoint
     var reqBody = {
       text: "Example text",
@@ -28,7 +30,7 @@ describe("POST /api/examples", function() {
     request
       .post("/api/examples")
       .send(reqBody)
-      .end(function(err, res) {
+      .end(function (err, res) {
         var responseStatus = res.status;
         var responseBody = res.body;
 
