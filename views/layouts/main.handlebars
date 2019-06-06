@@ -26,6 +26,9 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#intro-section">Introduction</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#stock-section">Stocks</a>
           </li>
           <li class="nav-item">
@@ -49,21 +52,25 @@
   <!-- JUMBOTRON (END) -->
 
   <!-- INTRODUCTION (START) -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10 col-md-10 col-lg-10 offset-1">
-        <h2 class="text-center" id="intro">Introduction</h2>
-        <p class="text-center" id="introStatement">This application is designed to simulate basic stock transactions
-          over a
-          fixed series of historical 30-day monthly periods. You start with $100,000 cash and have a list of stocks and
-          indexes (basket of stocks) to choose from. The prices on screen are historical prices from that respective
-          period. Your only limitation to buying and selling is your cash balance. Once your done trading for a
-          specific period, click the ‘Next Period’ button to advance and see the new prices and your new portfolio
-          valuation. The full simulation is 12 periods long. After you complete all 12 periods click the ‘Create Chart”
-          button to see a visualization of your stock portfolio's performance over the given time series.</p>
+  <section id="intro-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-10 col-lg-10 offset-1">
+          <h2 class="text-center" id="intro">Introduction</h2>
+          <p class="text-center" id="introStatement">This application is designed to simulate basic stock transactions
+            over a
+            fixed series of historical 30-day monthly periods. You start with $100,000 cash and have a list of stocks
+            and
+            indexes (basket of stocks) to choose from. The prices on screen are historical prices from that respective
+            period. Your only limitation to buying and selling is your cash balance. Once your done trading for a
+            specific period, click the ‘Next Period’ button to advance and see the new prices and your new portfolio
+            valuation. The full simulation is 12 periods long. After you complete all 12 periods click the ‘Create
+            Chart”
+            button to see a visualization of your stock portfolio's performance over the given time series.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- INTRODUCTION (END) -->
 
   {{{ body }}}
